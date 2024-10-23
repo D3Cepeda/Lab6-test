@@ -13,22 +13,6 @@ def encode(password):
     return res
 
 
-def decode(enc_password):
-    res = ""
-    for dig in enc_password:
-        dig = int(dig)
-        if dig == 2:
-            dig = 9
-        elif dig == 1:
-            dig = 8
-        elif dig == 0:
-            dig = 7
-        else:
-            dig -= 3
-        res += str(dig)
-    return res
-
-
 if __name__ == '__main__':
     repeat = True
     while repeat is True:
